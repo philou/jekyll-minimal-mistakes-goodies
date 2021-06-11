@@ -22,7 +22,7 @@ mkdir $IMAGE_DIR_PATH
 echo "Image dir created" $IMAGE_DIR_PATH
 
 # Update date and image dir in the post file because jekyll-compose does not handle them
-sed -i '' 's/<POST_FILE_NAME>/'$POST_FILE_NAME'/' $POST_FILE_PATH
-sed -i '' 's/date:.*/date: '$PUBLISH_DATE'/' $POST_FILE_PATH
+less $POST_FILE_PATH | sed 's/<POST_FILE_NAME>/'$POST_FILE_NAME'/' | sed 's/date:.*/date: '$PUBLISH_DATE'/' > $POST_FILE_PATH
+
 echo "Updated post front matter:"
 cat $POST_FILE_PATH

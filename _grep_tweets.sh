@@ -11,4 +11,4 @@ fi
 
 
 
-egrep --only-matching "(^\s*(\*|[1-9]\.)\s*)?\*\*([^\*]|\*[^\*])*\*\*" $POST_FILE_PATH | sed 's/\*\*//g'
+egrep --only-matching "(^\s*(\*|[1-9]\.)\s*)?\*\*([^\*]|\*[^\*])*\*\*" $POST_FILE_PATH | sed 's/\*\*//g' | sed 's/^/- /g'

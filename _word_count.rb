@@ -1,11 +1,13 @@
 #!/usr/bin/env ruby
 
+require 'fileutils'
 require 'yaml'
 require 'open3'
 
 if ARGV.empty?
   puts "Prints <post title>;<word count> for a Jekyll post"
   puts "Usage: ruby _word_count.rb <Jekyll-Post-Path>"
+  puts "Note: relies on python3 and pip3 to install markdown-work-count"
   exit 1
 end
 
@@ -23,9 +25,11 @@ begin
 
   title = YAML.load(front_matter)["title"]
 
+  FileUtils.mkdir_p("tmp")
   File.write("tmp/post.markdown", markdown)
 
-  count, status = Open3.capture2("python3 markdown-word-count/mwc.py tmp/post.markdown")
+  `pip3 install markdown-word-count`
+  count, status = Open3.capture2("mwc tmp/post.markdown")
 
   puts "#{title};#{count}"
 

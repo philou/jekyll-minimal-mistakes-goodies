@@ -10,5 +10,5 @@ if [[ $# -ne 1 ]] ; then
 fi
 
 
-
-egrep --only-matching "(^\s*(\*|[1-9]\.)\s*)?\*\*([^\*]|\*[^\*])*\*\*" $POST_FILE_PATH | sed 's/\*\*//g' | sed 's/^/- /g'
+# I use awk because `sed 's/^/- /g'` was crashing on emojis...
+egrep --only-matching "(^\s*(\*|[1-9]\.)\s*)?\*\*([^\*]|\*[^\*])*\*\*" $POST_FILE_PATH | sed 's/\*\*//g' | awk '{print "- " $0}'

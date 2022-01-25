@@ -78,6 +78,14 @@ By [Philippe Bourgau]({{site.url}}), under [CC BY-SA 4.0](http://creativecommons
 5. Generate .xmp metadata from [Creative Commons website](https://creativecommons.org/choose/#metadata)
 6. Add the metadata to images with `exiftool -tagsFromFile CC_Attribution-ShareAlike_4.0_International.xmp xxx1.jpg xxx2.jpg...`
 
+#### Allowing people to retweet an image
+
+From https://www.christiankonline.com/twitter-retweet-link-tutorial/
+
+1. First send a tweet with the high-res image (cf Images best sizes)
+2. Write down the tweet-id
+3. Add this markdown under the image, with the new tweet-id `[Retweet this image](https://twitter.com/intent/retweet?tweet_id=\<TWEET_ID\>)`
+
 ### Extracting bold sections from a post
 
 This can be useful to generate tweets or variations for [Recurpost](https://recurpost.com).

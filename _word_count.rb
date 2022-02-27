@@ -18,7 +18,7 @@ begin
 
   sections = full_text.split(/^---\s*$/)
   sections.delete("")
-  raise StandardError.new "Failed to correctly extract YAML and Markdown" unless sections.size == 2
+  raise StandardError.new "Failed to correctly extract YAML and Markdown" unless sections.size >= 2
 
   front_matter = sections[0]
   markdown = sections[1]
@@ -36,5 +36,6 @@ begin
 rescue StandardError => e
   STDERR.puts "-- ERROR: Could not process #{post_path}"
   STDERR.puts e.message
-  STDERR.puts e.backtrace.inspect
+  STDERR.puts 
+  STDERR.puts "\tat #{e.backtrace.join("\n\tat ")}"
 end

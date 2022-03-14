@@ -5,6 +5,7 @@ export POST_FILE_PATH=$1
 
 # Display usage if not called correctly
 if [[ $# -ne 1 ]] ; then
+    echo "Greps a post for bold sections and outputs them as a '-' prepended list of 'tweetable' sentences."
     echo "Usage ./$ME POST_FILE_PATH"
     exit 1
 fi

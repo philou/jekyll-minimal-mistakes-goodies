@@ -5,7 +5,8 @@ export PUBLISH_DATE=$2
 
 # Display usage if not called correctly
 if [[ $# -ne 2 ]] ; then
-    echo "Usage ./_new_post.sh POST_NAME PUBLISH_DATE_YYYY-MM-DD"
+    echo 'Creates a new post using the Jekyll compose template defined in _config.yml'
+    echo 'Usage ./_new_post.sh "POST NAME" PUBLISH_DATE_YYYY-MM-DD'
     exit 1
 fi
 

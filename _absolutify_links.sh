@@ -5,6 +5,8 @@ export POST_FILE_PATH=$1
 
 # Display usage if not called correctly
 if [[ $# -ne 1 ]] ; then
+    echo "Replaces any relative link or hard-coded url with {{site.url}} and {{site.baseurl}}"
+    echo "so that links display correctly in emails."
     echo "Usage ./$ME POST_FILE_PATH"
     exit 1
 fi

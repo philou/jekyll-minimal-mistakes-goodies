@@ -8,7 +8,17 @@ Create a sub-module in your blog repo under the _scripts directory.
 
 ## Usage
 
-Run the scripts from the root of your blog repo, `_scripts/_<command>`
+Run the scripts from the root of your blog repo, `_scripts/_<command>`. They will print out an example usage line.
+
+## Scripts
+
+- `_absolutify_links.sh` to make link absolute so that they display well emails
+- `_check_fixmes.sh` to grep all FIXME comments that might be left in the files
+- `_check_links.sh` to grep for all bad links (ex: relative, or local only)
+- `_grep_tweets.sh` greps a post for bold sentences that could be tweeted
+- `_new_post.sh` creates a new post skeleton
+- `_preview.sh` runs a local server to see local changes
+- `_word_count.rb` Computes the number of words in a post
 
 ## Notes and Troubleshooting
 

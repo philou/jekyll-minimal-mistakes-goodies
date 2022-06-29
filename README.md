@@ -24,6 +24,15 @@ Run the scripts from the root of your blog repo, `_scripts/_<command>`. They wil
 
 Here are common reminders and fixes.
 
+### How to setup on windows
+
+1. Check the ruby version in ../.ruby-version.
+2. Head to https://rubyinstaller.org/downloads/, and download the appropriate Ruby+Devkit installer
+3. Run the installer
+4. Open a git-bash and head to the blog main dir
+5. Run `bundle install`
+6. Run `_scripts/_preview.sh` and check that the website is available
+
 ### How to update gem dependencies
 
 Gems need to be updated regularly:

@@ -28,7 +28,7 @@ Here are common reminders and fixes.
 
 1. Check the ruby version in ../.ruby-version.
 2. Head to https://rubyinstaller.org/downloads/, and download the appropriate Ruby+Devkit installer
-3. Run the installer
+3. Run the installer, when asked for what to install in the command line, choose option '3'
 4. Open a git-bash and head to the blog main dir
 5. Run `bundle install`
 6. Run `_scripts/_preview.sh` and check that the website is available

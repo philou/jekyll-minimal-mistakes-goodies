@@ -24,6 +24,14 @@ Run the scripts from the root of your blog repo, `_scripts/_<command>`. They wil
 
 Here are common reminders and fixes.
 
+### How to add comments in markdown
+
+```markdown
+[comment]: # (this is a comment)
+```
+
+See https://stackoverflow.com/questions/4823468/comments-in-markdown for the explanation
+
 ### How to setup on windows
 
 1. Check the ruby version in ../.ruby-version.
